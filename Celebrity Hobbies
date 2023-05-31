@@ -1,0 +1,42 @@
+CREATE table celebrities (id integer PRIMARY KEY, full_name TEXT, profession TEXT, favorite_snack TEXT);
+
+INSERT INTO celebrities VALUES
+(1, "Sylvester Stallone", "Actor", "Banana"),
+(2, "Fifty Cent", "Rapper", "Chocolate"),
+(3, "Bill Nye", "Scientist", "Cantalope"),
+(4, "Kobe Bryant", "Athlete", "Avocado Toast"),
+(5, "Adam Driver", "Actor", "Pie"),
+(6, "Hank Green", "Scientist", "Avocado Toast"),
+(7, "Leslie Knope", "Civil Servant", "Pancakes"),
+(8, "Cardi B", "Rapper", "Popcorn"),
+(9, "Natalie Portman", "Actress", "French Toast"),
+(10, "Jamie Foxx", "Singer", "Steak Sandiwch"),
+(11, "Brad Pitt", "Actor", "Crackers"),
+(12, "Mindy Kaling", "Actress", "Hummus"),
+(13, "Jeremy Irons", "Actor", "Biscuits"),
+(14, "Roger Federer", "Athlete", "Energy Bar"),
+(15, "Lionel Messi", "Athlete", "Avocado Toast");
+
+CREATE table hobbies (id integer PRIMARY KEY, full_name TEXT, hobby_1 TEXT, hobby_2 TEXT);
+
+INSERT INTO hobbies VALUES
+(1, "Sylvester Stallone", "Running", "Boxing"),
+(2, "Fifty Cent", "Writing", "Singing"),
+(3, "Bill Nye", "Bird Watching", "Reading"),
+(4, "Kobe Bryant", "Writing", "Weight Lifting"),
+(5, "Adam Driver", "Dungeons n Dragons", "Auto Repair"),
+(6, "Hank Green", "Studying", "Bird Watching"),
+(7, "Leslie Knope", "Flags", "Knitting"),
+(8, "Cardi B", "Exercise", "Writing"),
+(9, "Natalie Portman", "Reading", "Theatre"),
+(10, "Jamie Foxx", "Piano", "Poetry"),
+(11, "Brad Pitt", "Banjo", "Flute"),
+(12, "Mindy Kaling", "Pop Culture", "Fashion"),
+(13, "Jeremy Irons", "Crochet", "Farming"),
+(14, "Roger Federer", "Running", "Yoga"),
+(15, "Lionel Messi", "Yoga", "Cryotherapy");
+
+SELECT celebrities.full_name, celebrities.profession, hobbies.hobby_1, hobbies.hobby_2
+FROM celebrities
+JOIN hobbies
+    ON celebrities.full_name = hobbies.full_name;
