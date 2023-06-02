@@ -1,5 +1,7 @@
-CREATE table celebrities (id integer PRIMARY KEY, full_name TEXT, profession TEXT, favorite_snack TEXT);
+-- Create a table with celebrity information
+Create table (id integer PRIMARY KEY, full_name TEXT, profession TEXT, favorite_snack TEXT);
 
+-- Insert data into the table
 INSERT INTO celebrities VALUES
 (1, "Sylvester Stallone", "Actor", "Banana"),
 (2, "Fifty Cent", "Rapper", "Chocolate"),
@@ -17,8 +19,10 @@ INSERT INTO celebrities VALUES
 (14, "Roger Federer", "Athlete", "Energy Bar"),
 (15, "Lionel Messi", "Athlete", "Avocado Toast");
 
+--Create a table for celebrity hobbies
 CREATE table hobbies (id integer PRIMARY KEY, full_name TEXT, hobby_1 TEXT, hobby_2 TEXT);
 
+--Insert data into the celebrity hobbies table
 INSERT INTO hobbies VALUES
 (1, "Sylvester Stallone", "Running", "Boxing"),
 (2, "Fifty Cent", "Writing", "Singing"),
@@ -36,6 +40,7 @@ INSERT INTO hobbies VALUES
 (14, "Roger Federer", "Running", "Yoga"),
 (15, "Lionel Messi", "Yoga", "Cryotherapy");
 
+--Join each table to display the celebrity, their profession, and two of their hobbies
 SELECT celebrities.full_name, celebrities.profession, hobbies.hobby_1, hobbies.hobby_2
 FROM celebrities
 JOIN hobbies
